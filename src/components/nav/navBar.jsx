@@ -1,62 +1,19 @@
+'use client'
+import { useState } from 'react'
 import Image from "next/image";
 import Link from "next/link";
 import HamburguerBtn from "./hamburguerBtn";
 import ressonarLogo from "/public/RSS Rojos.png";
 import searchIcon from "/public/search-solid.svg"
+import SubMenu from './subMenu';
 
 const NavBar = () => {
-    const linkClass = "md:rotate-180";
-    const linkStyle = { writingMode: "vertical-rl" };
+    const [toggle, setToggle] = useState(false)
 
     return (
         <nav className="fixed flex sm:flex-row  md:flex-col justify-between items-center w-full md:w-16 md:h-screen bg-gray-200 shadow-md">
-            <HamburguerBtn />
-            <div className="hidden md:flex flex-col justify-between items-center item bg-red h-1/2 md:pt-6">
-                <ul>
-                    <li>
-                        <Link
-                            style={linkStyle}
-                            className={linkClass}
-                            href="/ressonar"
-                        >
-                            Ressonar
-                        </Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <Link
-                            style={linkStyle}
-                            className={linkClass}
-                            href="/audiovisual"
-                        >
-                            Audiovisual
-                        </Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <Link
-                            style={linkStyle}
-                            className={linkClass}
-                            href="/talento"
-                        >
-                            Talento
-                        </Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <Link
-                            style={linkStyle}
-                            className={linkClass}
-                            href="/contacto"
-                        >
-                            Contacto
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+            <HamburguerBtn onClick={() => setToggle(!toggle)}/>
+            <SubMenu toggle={toggle} />
             <div className="flex flex-row justify-center items-center py-2 md:order-last">
                 <Link href="/">
                     <Image
