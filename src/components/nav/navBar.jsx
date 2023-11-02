@@ -57,7 +57,7 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex flex-row justify-center items-center py-3">
+            <div className="flex flex-row justify-center items-center py-2 md:order-last">
                 <Link href="/">
                     <Image
                         src={ressonarLogo}
@@ -67,13 +67,13 @@ const NavBar = () => {
                     />
                 </Link>
             </div>
-            <button>
-                <div className="flex flex-row justify-center items-center sm:px-3 md:p-4">
+            <button className="sm:px-3 md:px-1">
+                <div className="flex flex-row justify-center items-center md:p-4 md:order-2">
                     <Image
                         src={searchIcon}
                         alt="icono de busqueda"
-                        width={30}
-                        height={30}
+                        width={25}
+                        height={25}
                     />
                 </div>
             </button>
