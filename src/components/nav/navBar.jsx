@@ -1,18 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import HamburguerBtn from "./hamburguerBtn";
 import ressonarLogo from "/public/RSS Rojos.png";
 import searchIcon from "/public/search-solid.svg"
-import HamburguerBtn from "./hamburguerBtn";
 
 const NavBar = () => {
     const linkClass = "md:rotate-180";
     const linkStyle = { writingMode: "vertical-rl" };
 
-
     return (
-        <nav className="fixed flex sm:flex-row  md:flex-col justify-between items-center w-full md:w-24 bg-gray-200 shadow-md">
+        <nav className="fixed flex sm:flex-row  md:flex-col justify-between items-center w-full md:w-16 md:h-screen bg-gray-200 shadow-md">
             <HamburguerBtn />
-            <div className="hidden md:flex flex-col justify-between item bg-red">
+            <div className="hidden md:flex flex-col justify-between items-center item bg-red h-1/2 md:pt-6">
                 <ul>
                     <li>
                         <Link
@@ -69,7 +68,7 @@ const NavBar = () => {
                 </Link>
             </div>
             <button>
-                <div className="flex flex-row justify-center items-center px-3">
+                <div className="flex flex-row justify-center items-center sm:px-3 md:p-4">
                     <Image
                         src={searchIcon}
                         alt="icono de busqueda"

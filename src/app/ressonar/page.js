@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <main>
+        <main className="pl-16">
             Ressonar
         </main>
     )

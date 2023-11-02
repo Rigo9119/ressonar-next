@@ -4,6 +4,6 @@ export const metadata ={
 
 export default function Page() {
     return (
-        <main>Talento</main>
+        <main className="pl-16">Talento</main>
     );
 }

@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Home() {
-    return <main>home</main>;
+    return <main className="ml-16">home</main>;
 }
