@@ -67,7 +67,7 @@ const NavBar = () => {
                     />
                 </Link>
             </div>
-            <button className="sm:px-3 md:px-1">
+            <button className="px-3 md:px-1">
                 <div className="flex flex-row justify-center items-center md:p-4 md:order-2">
                     <Image
                         src={searchIcon}
