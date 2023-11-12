@@ -2,12 +2,7 @@
 
 const Perfil = () => {
     return (
-        <div className="w-1/4 p-4 bg-red-500 text-black">
-            <ul>
-                <li>Persona Uno</li>
-                <li>Persona dos</li>
-            </ul>
-            <div className="">
+            <div className="w-1/4 p-4 bg-red-500 text-black">
                 <div>
                     <h3>Nombre de persona</h3>
                     <p>
@@ -26,8 +21,6 @@ const Perfil = () => {
                     Nombre de persona
                 </button>
             </div>
-            <button>Volver</button>
-        </div>
     );
 };
 

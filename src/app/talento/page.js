@@ -1,5 +1,3 @@
-import Perfil from "@/components/perfil/perfil";
-
 export const metadata = {
     title: "Talento pagina principal",
 };
@@ -7,8 +5,13 @@ export const metadata = {
 export default function Page() {
     return (
         <main className="pl-16 flex flex-row h-screen">
-            <Perfil />
-            <div className="w-3/4 flex flex-row flex-wrap">
+            <div className="w-1/4 p-4 bg-red-500 text-black">
+                <ul>
+                    <li>Persona Uno</li>
+                    <li>Persona dos</li>
+                </ul>
+            </div>
+            <div className="w-3/4 flex sm:flex-col md:flex-row flex-wrap">
                 <div className="w-1/2 flex items-center justify-center  bg-red-200">
                     Item 1
                 </div>
