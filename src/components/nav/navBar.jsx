@@ -6,7 +6,8 @@ import HamburguerBtn from "./hamburguerBtn";
 import ressonarLogo from "/public/RSS Rojos.png";
 import searchIcon from "/public/search-solid.svg"
 import NavLinks from './navLinks';
-import { SubMenu } from './subMenu';
+import MobileMenu from './mobileMenu';
+
 
 const NavBar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
@@ -26,18 +27,8 @@ const NavBar = () => {
                         />
                     </Link>
                 </div>
-                <button className="px-3 md:px-1">
-                    <div className="flex flex-row justify-center items-center md:p-4 md:order-2">
-                        <Image
-                            src={searchIcon}
-                            alt="icono de busqueda"
-                            width={25}
-                            height={25}
-                        />
-                    </div>
-                </button>
             </nav>
-            {toggleMenu ? (<SubMenu />) : null}
+            {toggleMenu ? (<MobileMenu />) : null}
         </>
     );
 };

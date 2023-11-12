@@ -1,12 +1,8 @@
 import Perfil from "@/components/perfil/perfil";
 
-export const metadata = {
-    title: "Talento pagina principal",
-};
-
 export default function Page() {
     return (
-        <main className="pl-16 flex flex-row h-screen">
+        <main>
             <Perfil />
             <div className="w-3/4 flex flex-row flex-wrap">
                 <div className="w-1/2 flex items-center justify-center  bg-red-200">
@@ -23,5 +19,5 @@ export default function Page() {
                 </div>
             </div>
         </main>
-    );
+    )
 }

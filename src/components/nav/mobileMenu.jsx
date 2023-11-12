@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 
-export const SubMenu = () => {
+const MobileMenu = () => {
     return (
         <div className="pt-20 bg-black text-white h-screen">
             <ul className="p-5">
@@ -33,3 +33,5 @@ export const SubMenu = () => {
         </div>
     );
 };
+
+export default MobileMenu
