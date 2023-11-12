@@ -6,10 +6,7 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        fontFamily: {
-            'sans': ['Montserrat', 'sans-serif'],
-            'montserrat': ['Montserrat', 'sans-serif'],
-        },
+        extends: {},
     },
     plugins: [],
 };

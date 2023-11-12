@@ -1,3 +1,4 @@
+import PackItemCard from "@/components/cards/packItemCard";
 import { performRequest } from "../../lib/datocms";
 
 export const metadata = {
@@ -21,13 +22,30 @@ export default async function Home() {
     } = await performRequest({ query: HERO_QUERY });
 
     return (
-        <main>
-            <div className="ml-16 h-screen bg-black flex items-center justify-center flex-col">
-                <h1 className="text-white montserrat text-6xl mb-12">
+        <main className="ml-16">
+            <div className="h-screen bg-black flex items-center justify-center flex-col">
+                <h1 className="text-white text-6xl mb-12">
                     {heroTittle}
                 </h1>
-                <p className="text-white text-center w-3/4">{heroParagraph}</p>
+                <p className="text-white text-xl text-center w-3/4">
+                    {heroParagraph}
+                </p>
             </div>
+            <section className="h-screen bg-gray-600">
+                <PackItemCard />
+                <PackItemCard />
+                <PackItemCard />
+            </section>
+            <section>
+                <h2>
+                    Lo que hacemos
+                </h2>
+            </section>
+            <section>
+                <h2>
+                    Clientes
+                </h2>
+            </section>
         </main>
     );
 }
