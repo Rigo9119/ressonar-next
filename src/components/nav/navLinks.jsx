@@ -9,8 +9,8 @@ const NavLinks = () => {
     return (
         <ul className={wrapperClass}>
             <li>
-                <Link style={linkStyle} className={linkClass} href="/ressonar">
-                    Ressonar
+                <Link style={linkStyle} className={linkClass} href="/contacto">
+                    Contacto
                 </Link>
             </li>
             <li>
@@ -27,10 +27,9 @@ const NavLinks = () => {
                     Talento
                 </Link>
             </li>
-
             <li>
-                <Link style={linkStyle} className={linkClass} href="/contacto">
-                    Contacto
+                <Link style={linkStyle} className={linkClass} href="/ressonar">
+                    Ressonar
                 </Link>
             </li>
         </ul>
