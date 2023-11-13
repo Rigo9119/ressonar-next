@@ -31,7 +31,7 @@ export default async function Home() {
                     {heroParagraph}
                 </p>
             </div>
-            <section className="h-screen bg-gray-600">
+            <section className="px-4 py-20 flex flex-row justify-around items-center h-auto bg-gray-600">
                 <PackItemCard />
                 <PackItemCard />
                 <PackItemCard />
