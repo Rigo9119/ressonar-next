@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
     title: "Talento pagina principal",
 };
@@ -7,8 +9,16 @@ export default function Page() {
         <main className="pl-16 flex flex-row h-screen">
             <div className="w-1/4 p-4 bg-red-500 text-black">
                 <ul>
-                    <li>Persona Uno</li>
-                    <li>Persona dos</li>
+                    <li className="mb-3">
+                        <Link href='/talento/person-uno'>
+                            Persona uno
+                        </Link>
+                    </li>
+                    <li className="mb-3">
+                        <Link href='/talento/persona-dos'>
+                            Persona dos
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className="w-3/4 flex sm:flex-col md:flex-row flex-wrap">
