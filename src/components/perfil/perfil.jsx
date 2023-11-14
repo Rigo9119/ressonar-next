@@ -9,8 +9,8 @@ const Perfil = () => {
     return (
         <>
             {toggle ? (
-                <div className="w-1/4 p-4 bg-red-500 text-black flex flex-col ">
-                    <div className="flex flex-col justify-around items-start h-3/4">
+                <div className="w-full p-4 bg-red-500 text-black flex flex-col gap-4 md:w-1/4">
+                    <div className="flex flex-col gap-4 justify-around items-center md:items-start md:h-3/4">
                         <h3 className="text-white uppercase">
                             Nombre de persona
                         </h3>
@@ -33,7 +33,7 @@ const Perfil = () => {
                     </div>
                     <div className="flex items-center justify-between w-full h-1/4">
                         <Link className="text-xl" href="/talento">Volver</Link>
-                        <button onClick={handletoggle}>
+                        <button className="hidden md:flex" onClick={handletoggle}>
                             <span className="text-white text-xl">&rarr;</span>
                         </button>
                     </div>
@@ -42,7 +42,7 @@ const Perfil = () => {
                 <button
                     onClick={handletoggle}
                     style={{ writingMode: "vertical-rl" }}
-                    className="px-3 text-lg bg-red-500 text-white"
+                    className="hidden md:flex flex-row items-center justify-center px-3 text-lg bg-red-500 text-white"
                 >
                     Nombre de la persona
                 </button>

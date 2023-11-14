@@ -6,8 +6,8 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <main className="pl-16 flex flex-row h-screen">
-            <div className="w-64 p-4 bg-red-500 text-black">
+        <main className="pt-16 md:pt-0 md:ml-16 flex md:flex-row h-screen">
+            <div className="w-full md:w-64 p-4 bg-red-500 text-black">
                 <ul className="text-white text-xl">
                     <li className="mb-3 hover:italic">
                         <Link href="/talento/person-uno">Persona uno</Link>
@@ -17,7 +17,7 @@ export default function Page() {
                     </li>
                 </ul>
             </div>
-            <div className="w-full flex sm:flex-col md:flex-row flex-wrap">
+            <div className="w-full hidden md:flex sm:flex-col md:flex-row flex-wrap">
                 <div className="w-1/2 flex items-center justify-center  bg-red-200">
                     Item 1
                 </div>
