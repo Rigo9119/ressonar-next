@@ -34,7 +34,7 @@ const Perfil = () => {
                     <div className="flex items-center justify-between w-full h-1/4">
                         <Link className="text-xl" href="/talento">Volver</Link>
                         <button className="hidden md:flex" onClick={handletoggle}>
-                            <span className="text-white text-xl">&rarr;</span>
+                            <span className="text-white text-xl">&larr;</span>
                         </button>
                     </div>
                 </div>
