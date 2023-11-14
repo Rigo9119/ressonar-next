@@ -1,33 +1,51 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 
 const Perfil = () => {
+    const [toggle, setToggle] = useState(true);
+    const handletoggle = () => setToggle(!toggle);
+
     return (
-        <div className="w-1/4 p-4 bg-red-500 text-black flex flex-col ">
-            <div className="flex flex-col justify-around items-start h-3/4">
-                <h3 className="text-white uppercase">
-                    Nombre de persona
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Necessitatibus quam magnam vel omnis itaque molestiae neque
-                    consequuntur labore beatae expedita porro inventore
-                    suscipit, eius officia ab adipisci vitae molestias tenetur!
-                </p>
-                <div>
-                    <p className="pb-4">
-                        Sigue a Nombre de persona en sus redes
-                    </p>
-                    <ul>
-                        <li>red social uno</li>
-                        <li>red social uno</li>
-                    </ul>
+        <>
+            {toggle ? (
+                <div className="w-1/4 p-4 bg-red-500 text-black flex flex-col ">
+                    <div className="flex flex-col justify-around items-start h-3/4">
+                        <h3 className="text-white uppercase">
+                            Nombre de persona
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Necessitatibus quam magnam vel omnis itaque
+                            molestiae neque consequuntur labore beatae expedita
+                            porro inventore suscipit, eius officia ab adipisci
+                            vitae molestias tenetur!
+                        </p>
+                        <div>
+                            <p className="pb-4">
+                                Sigue a Nombre de persona en sus redes
+                            </p>
+                            <ul>
+                                <li>red social uno</li>
+                                <li>red social uno</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-between w-full h-1/4">
+                        <Link href="/talento">Volver</Link>
+                        <button onClick={handletoggle}>{"->"}</button>
+                    </div>
                 </div>
-            </div>
-            <div className="h-1/4">
-                <Link href='/talento'>Volver</Link>
-            </div>
-        </div>
+            ) : (
+                <button
+                    onClick={handletoggle}
+                    style={{ writingMode: "vertical-rl" }}
+                    className="px-3 text-lg bg-red-500 text-white"
+                >
+                    Nombre de la persona
+                </button>
+            )}
+        </>
     );
 };
 

@@ -7,21 +7,17 @@ export const metadata = {
 export default function Page() {
     return (
         <main className="pl-16 flex flex-row h-screen">
-            <div className="w-1/4 p-4 bg-red-500 text-black">
-                <ul>
-                    <li className="mb-3">
-                        <Link href='/talento/person-uno'>
-                            Persona uno
-                        </Link>
+            <div className="w-64 p-4 bg-red-500 text-black">
+                <ul className="text-white text-xl">
+                    <li className="mb-3 hover:italic">
+                        <Link href="/talento/person-uno">Persona uno</Link>
                     </li>
-                    <li className="mb-3">
-                        <Link href='/talento/persona-dos'>
-                            Persona dos
-                        </Link>
+                    <li className="mb-3 hover:italic">
+                        <Link href="/talento/persona-dos">Persona dos</Link>
                     </li>
                 </ul>
             </div>
-            <div className="w-3/4 flex sm:flex-col md:flex-row flex-wrap">
+            <div className="w-full flex sm:flex-col md:flex-row flex-wrap">
                 <div className="w-1/2 flex items-center justify-center  bg-red-200">
                     Item 1
                 </div>
