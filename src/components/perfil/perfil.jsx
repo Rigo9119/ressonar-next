@@ -32,8 +32,10 @@ const Perfil = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-between w-full h-1/4">
-                        <Link href="/talento">Volver</Link>
-                        <button onClick={handletoggle}>{"->"}</button>
+                        <Link className="text-xl" href="/talento">Volver</Link>
+                        <button onClick={handletoggle}>
+                            <span className="text-white text-xl">&rarr;</span>
+                        </button>
                     </div>
                 </div>
             ) : (

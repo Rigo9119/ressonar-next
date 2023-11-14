@@ -14,10 +14,10 @@ const NavBar = () => {
 
     return (
         <>
-            <nav className="fixed flex sm:flex-row  md:flex-col justify-between items-center w-full md:w-16 md:h-screen bg-gray-200 shadow-md">
+            <nav className="fixed flex flex-row  md:flex-col justify-between items-center w-full bg-gray-200 shadow-md md:h-screen md:w-16">
                 <HamburguerBtn onClick={() => setToggleMenu(!toggleMenu)}/>
                 <NavLinks />
-                <div className="flex flex-row justify-center items-center py-2 md:order-last">
+                <div className="flex flex-row justify-center items-center py-2 pr-2 md:pr-0 md:order-last">
                     <Link href="/">
                         <Image
                             src={ressonarLogo}
