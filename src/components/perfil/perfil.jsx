@@ -9,7 +9,7 @@ const Perfil = () => {
     return (
         <>
             {toggle ? (
-                <div className="w-full p-4 bg-red-500 text-black flex flex-col gap-4 md:w-1/4">
+                <div className="order-first w-full p-4 bg-red-500 text-black flex flex-col gap-4 md:w-1/4 md:order-last">
                     <div className="flex flex-col gap-4 justify-around items-center md:items-start md:h-3/4">
                         <h3 className="text-white uppercase">
                             Nombre de persona
@@ -34,7 +34,7 @@ const Perfil = () => {
                     <div className="flex items-center justify-between w-full h-1/4">
                         <Link className="text-xl" href="/talento">Volver</Link>
                         <button className="hidden md:flex" onClick={handletoggle}>
-                            <span className="text-white text-xl">&larr;</span>
+                            <span className="text-white text-xl">&rarr;</span>
                         </button>
                     </div>
                 </div>

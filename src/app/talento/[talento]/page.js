@@ -3,7 +3,6 @@ import Perfil from "@/components/perfil/perfil";
 export default function Page() {
     return (
         <main className="pt-16 md:pt-0 md:ml-16 flex flex-col md:flex-row h-screen">
-            <Perfil />
             <div className="w-full flex flex-col md:flex-row flex-wrap">
                 <div className="w-full flex items-center justify-center  bg-red-200 md:w-1/2">
                     Item 1
@@ -18,6 +17,7 @@ export default function Page() {
                     Item 4
                 </div>
             </div>
+            <Perfil />
         </main>
     )
 }
