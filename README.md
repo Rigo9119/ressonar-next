@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ressonar next
 
-## Getting Started
+Este readme incluye los pasos para correr el ambiente de de desorrollo de la pagina 
+de Ressonar Films.
 
-First, run the development server:
+## Tech stack 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Para este proyecto utilizamos las siguientes tecnologías:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Next.js v.14](https://nextjs.org/)
+- [Dato CMS](https://www.datocms.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Bun](https://bun.sh/)
+- Git y Github para el control de versiones y hosting del repositorio el cual puedes encontrar [acá](https://github.com/Rigo9119/ressonar-next)
+- Node Js version 18 o superior, es recomendaable utilizar [nvm](https://github.com/nvm-sh/nvm).
+- La aplicacion esta alojada en vercel.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Para empezar
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Asegurate de tener instalados Node Js y Bun en tu maquina. Descarga el repo y en tu terminal corre el comando ```bun install``` esto instalara las dependencias necesarias. Luego para ver tu servidor de desarrolo corre el comando ```bun dev```, abre tu buscador y podras ver la aplicación en [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Recomendaciones
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Como utilizamos [Next.js v.14](https://nextjs.org/) te recomendamos mirar la documentación ya que esta nueva version incluye una nueva estructura para manejar las rutas dentro de la aplicación.
