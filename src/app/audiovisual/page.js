@@ -31,14 +31,15 @@ export default async function Page() {
                             key={index}
                             href={item.link}
                             target="_blank"
-                            className="relative w-1/2"
+                            className="relative w-1/2 text-2xl hover:text-4xl cursor-pointer "
                         >
                             <img
                                 className="blur-sm hover:blur-none"
                                 src={`${item.asset.url}`}
                                 alt={`${item.title}`}
                             />
-                            <span className="absolute bottom-1/2 left-1/2 text-4xl text-white">
+                            <span
+                                className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
                                 {item.title}
                             </span>
                         </a>
