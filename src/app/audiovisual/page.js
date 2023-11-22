@@ -24,22 +24,21 @@ export default async function Page() {
 
     return (
         <main className="pt-16 md:ml-16 md:pt-0">
-            <div className="flex flex-wrap w-auto items-center justify-between">
+            <div className="flex flex-col flex-nowrap w-full items-center justify-between md:flex-row md:flex-wrap md:w-auto">
                 {allAudiovisuals.reverse().map((item, index) => {
                     return (
                         <a
                             key={index}
                             href={item.link}
                             target="_blank"
-                            className="relative w-1/2 text-2xl hover:text-4xl cursor-pointer "
+                            className="relative md:w-1/2 text-2xl hover:text-4xl cursor-pointer "
                         >
                             <img
                                 className="blur-sm hover:blur-none"
                                 src={`${item.asset.url}`}
                                 alt={`${item.title}`}
                             />
-                            <span
-                                className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
+                            <span className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
                                 {item.title}
                             </span>
                         </a>
