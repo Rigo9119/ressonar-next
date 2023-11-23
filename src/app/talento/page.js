@@ -3,7 +3,8 @@ import Link from "next/link";
 import { performRequest } from "../../../lib/datocms";
 
 export const metadata = {
-    title: "Talento pagina principal",
+    title: "Ressonar | Talento",
+    description: "Ressonar films | Pagina general de talento"
 };
 
 const TALENTO_QUERY = `

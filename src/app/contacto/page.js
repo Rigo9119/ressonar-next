@@ -1,5 +1,6 @@
 export const metadata = {
-    title: "Contacto",
+    title: "Ressonar | Contacto",
+    description: "Ressonar films | Pagina de contacto"
 };
 
 export default function Page() {

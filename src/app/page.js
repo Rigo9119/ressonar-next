@@ -2,7 +2,9 @@ import PackItemCard from "@/components/cards/packItemCard";
 import { performRequest } from "../../lib/datocms";
 
 export const metadata = {
-    title: "Inicio",
+    title: "Ressonar | Inicio",
+    description:
+        "Ressonar films | Ressonar es una forma de vivir interactuar y crear. Somos una productora audiovisual, creamos piezas y experiencias que te hacen vibrar con su energia.",
 };
 
 const HERO_QUERY = `
