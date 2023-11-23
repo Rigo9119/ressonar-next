@@ -31,10 +31,10 @@ export default async function Page() {
                             key={index}
                             href={item.link}
                             target="_blank"
-                            className="relative md:w-1/2 text-2xl hover:text-4xl cursor-pointer "
+                            className="relative md:w-1/2 text-2xl hover:text-3xl cursor-pointer "
                         >
                             <img
-                                className="blur-sm hover:blur-none"
+                                className="blur-sm grayscale hover:blur-none hover:grayscale-0"
                                 src={`${item.asset.url}`}
                                 alt={`${item.title}`}
                             />

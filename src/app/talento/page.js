@@ -42,32 +42,33 @@ export default async function Page() {
                     })}
                 </ul>
             </div>
-            <div className="w-full hidden md:flex sm:flex-col md:flex-row flex-wrap">
-                <div className="hidden items-center justify-between md:flex md:flex-row md:flex-wrap md:w-full">
+            <ul className="hidden w-full md:flex sm:flex-col md:flex-row flex-wrap overflow-auto">
                     {allAudiovisuals
                         .reverse()
-                        .slice(0, 4)
+                        .sort(() => Math.random() - 0.5)
                         .map((item, index) => {
                             return (
-                                <a
-                                    key={index}
-                                    href={item.link}
-                                    target="_blank"
-                                    className="relative md:w-1/2 text-2xl hover:text-4xl cursor-pointer "
+                                <li key={index}
+                                    className="md:w-1/2 flex items-center justify-between"
                                 >
-                                    <img
-                                        className="blur-sm hover:blur-none"
-                                        src={`${item.asset.url}`}
-                                        alt={`${item.title}`}
-                                    />
-                                    <span className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
-                                        {item.title}
-                                    </span>
-                                </a>
+                                    <a
+                                        href={item.link}
+                                        target="_blank"
+                                        className="relative text-2xl hover:text-3xl cursor-pointer "
+                                    >
+                                        <img
+                                            className="blur-sm grayscale hover:blur-none hover:grayscale-0"
+                                            src={`${item.asset.url}`}
+                                            alt={`${item.title}`}
+                                        />
+                                        <span className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
+                                            {item.title}
+                                        </span>
+                                    </a>
+                                </li>
                             );
                         })}
-                </div>
-            </div>
+            </ul>
         </main>
     );
 }
