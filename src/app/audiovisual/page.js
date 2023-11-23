@@ -2,7 +2,9 @@
 import { performRequest } from "../../../lib/datocms";
 
 export const metadata = {
-    title: "Audiovisual",
+    title: "Ressonar | Audiovisual",
+    description: "Ressonar films | Pagina de trabajo audiovisual"
+
 };
 
 const AUDIOVISUAL_QUERY = `

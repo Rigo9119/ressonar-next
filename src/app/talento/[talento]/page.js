@@ -2,6 +2,11 @@
 import Perfil from "@/components/perfil/perfil";
 import { performRequest } from "../../../../lib/datocms";
 
+export const metadata = {
+    title: "Ressonar | Talento",
+    description: "Ressonar films | Pagina general de talento"
+};
+
 const PERFIL_QUERY = `
     query perifl($name: String) {
         perfil(filter: {link: {eq: $name}}) {

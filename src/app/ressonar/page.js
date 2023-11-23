@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 export const metadata = {
-    title: "Ressonar",
+    title: "Ressonar | Ressonar films",
+    description: "Ressonar films | Pagina de Ressonar films",
 };
 
 export default function Page() {
