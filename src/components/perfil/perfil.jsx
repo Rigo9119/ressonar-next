@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const Perfil = () => {
+const Perfil = ({ perfil }) => {
     const [toggle, setToggle] = useState(true);
     const handletoggle = () => setToggle(!toggle);
 
@@ -12,18 +12,14 @@ const Perfil = () => {
                 <div className="order-first w-full p-4 bg-red-500 text-black flex flex-col gap-4 md:w-1/4 md:order-last">
                     <div className="flex flex-col gap-4 justify-around items-center md:items-start md:h-3/4">
                         <h3 className="text-white uppercase">
-                            Nombre de persona
+                            {perfil.nombre}
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus quam magnam vel omnis itaque
-                            molestiae neque consequuntur labore beatae expedita
-                            porro inventore suscipit, eius officia ab adipisci
-                            vitae molestias tenetur!
+                            {perfil.descripcion}
                         </p>
                         <div>
                             <p className="pb-4">
-                                Sigue a Nombre de persona en sus redes
+                                Sigue a {perfil.nombre.split(' ')[0]}
                             </p>
                             <ul>
                                 <li>red social uno</li>
@@ -44,7 +40,7 @@ const Perfil = () => {
                     style={{ writingMode: "vertical-rl" }}
                     className="hidden md:flex flex-row items-center justify-center px-3 text-lg bg-red-500 text-white"
                 >
-                    Nombre de la persona
+                    {perfil.nombre}
                 </button>
             )}
         </>
