@@ -1,6 +1,22 @@
+/* eslint-disable @next/next/no-async-client-component */
 import Perfil from "@/components/perfil/perfil";
+import { performRequest } from "../../../../lib/datocms";
 
-export default function Page() {
+const PERFIL_QUERY = `
+    query perifl($name: String) {
+        perfil(filter: {link: {eq: $name}}) {
+            nombre
+            descripcion
+        }
+    }
+`;
+
+export default async function Page({ params }) {
+    const { data: { perfil } } = await performRequest({
+        query: PERFIL_QUERY,
+        variables: { name: params.talento },
+    });
+
     return (
         <main className="pt-16 md:pt-0 md:ml-16 flex flex-col md:flex-row h-screen">
             <div className="w-full flex flex-col md:flex-row flex-wrap">
@@ -17,7 +33,7 @@ export default function Page() {
                     Item 4
                 </div>
             </div>
-            <Perfil />
+            <Perfil perfil={perfil}/>
         </main>
-    )
+    );
 }
