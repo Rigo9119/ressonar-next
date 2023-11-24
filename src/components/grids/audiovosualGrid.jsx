@@ -5,7 +5,6 @@ const AudiovosualGrid = ({ videos }) => {
     return (
         <div className="flex flex-col flex-nowrap w-full items-center justify-between md:flex-row md:flex-wrap md:w-auto bg-black">
             {videos
-                .reverse()
                 .slice(0, 6)
                 .map((item, index) => {
                     return (
