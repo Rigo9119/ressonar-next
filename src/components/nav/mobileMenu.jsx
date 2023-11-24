@@ -7,7 +7,7 @@ const MobileMenu = () => {
         <div className="pt-20 bg-black text-white h-screen">
             <ul className="p-5">
                 <li>
-                    <Link href="/ressonar">
+                    <Link href="/">
                         Ressonar
                     </Link>
                 </li>
