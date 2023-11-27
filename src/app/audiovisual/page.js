@@ -30,7 +30,7 @@ export default async function Page() {
     } = await performRequest({ query: AUDIOVISUAL_QUERY });
 
     return (
-        <main className="pt-16 md:ml-16 md:pt-0">
+        <main className="pt-16 md:ml-16 md:pt-0 bg-black">
             <AudiovosualGrid videos={allAudiovisuals} />
         </main>
     );
