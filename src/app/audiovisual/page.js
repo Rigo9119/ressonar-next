@@ -17,6 +17,9 @@ const AUDIOVISUAL_QUERY = `
             }
             title
             link
+            asset {
+                url
+            }
         }
     }
 `;
