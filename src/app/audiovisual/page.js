@@ -11,14 +11,15 @@ const AUDIOVISUAL_QUERY = `
     query allAudiovisuals {
         allAudiovisuals {
             assetVideo {
+                url
                 video {
-                    mp4Url
+                mp4Url
                 }
+                title
             }
-            title
-            link
             asset {
                 url
+                title
             }
         }
     }
