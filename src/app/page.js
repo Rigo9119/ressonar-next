@@ -2,6 +2,7 @@
 import { Image as DatoImage } from "react-datocms";
 import PackItemCard from "@/components/cards/packItemCard";
 import { performRequest } from "../../lib/datocms";
+import Hero from "@/components/hero/hero";
 
 export const metadata = {
     title: "Ressonar | Inicio",
@@ -12,6 +13,15 @@ export const metadata = {
 const RESSONAR_QUERY = `
     query hero {
         hero {
+            heroVideo {
+                video {
+                    streamingUrl
+                    thumbnailUrl
+                    mp4Url
+                }
+                url
+                title
+            }
             heroTittle
             heroParagraph
         }
@@ -51,7 +61,7 @@ const RESSONAR_QUERY = `
 export default async function Home() {
     const {
         data: {
-            hero: { heroTittle, heroParagraph },
+            hero,
             ressonar,
             allPacks,
         },
@@ -61,14 +71,7 @@ export default async function Home() {
 
     return (
         <main className="w-full pt-16 md:ml-16 md:pt-0">
-            <section className="sm:flex-col flex items-center justify-center flex-col h-screen bg-black">
-                <h1 className="text-white text-center w-full text-6xl mb-12">
-                    {heroTittle}
-                </h1>
-                <p className="text-white text-xl text-center w-3/4">
-                    {heroParagraph}
-                </p>
-            </section>
+            <Hero hero={hero}/>
             <section className="bg-black">
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-around gap-3 p-4">
                     <div className="flex flex-col w-1/2 items-center justify-center gap-6">
