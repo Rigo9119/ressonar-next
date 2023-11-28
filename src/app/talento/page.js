@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { performRequest } from "../../../lib/datocms";
+import AudiovosualGrid from "@/components/grids/audiovosualGrid";
 
 export const metadata = {
     title: "Ressonar | Talento",
@@ -44,31 +45,7 @@ export default async function Page() {
                 </ul>
             </div>
             <ul className="hidden w-full md:flex sm:flex-col md:flex-row flex-wrap overflow-auto">
-                    {allAudiovisuals
-                        .reverse()
-                        .sort(() => Math.random() - 0.5)
-                        .map((item, index) => {
-                            return (
-                                <li key={index}
-                                    className="md:w-1/2 flex items-center justify-between"
-                                >
-                                    <a
-                                        href={item.link}
-                                        target="_blank"
-                                        className="relative text-2xl hover:text-3xl cursor-pointer "
-                                    >
-                                        <img
-                                            className="blur-sm grayscale hover:blur-none hover:grayscale-0"
-                                            src={`${item.asset.url}`}
-                                            alt={`${item.title}`}
-                                        />
-                                        <span className="absolute blur-none inset-0 top-1/2 bottom-1/2 text-white text-center">
-                                            {item.title}
-                                        </span>
-                                    </a>
-                                </li>
-                            );
-                        })}
+                <AudiovosualGrid videos={allAudiovisuals}/>
             </ul>
         </main>
     );

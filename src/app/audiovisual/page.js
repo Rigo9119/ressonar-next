@@ -13,7 +13,7 @@ const AUDIOVISUAL_QUERY = `
             assetVideo {
                 url
                 video {
-                mp4Url
+                    mp4Url
                 }
                 title
             }
