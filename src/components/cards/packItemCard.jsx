@@ -6,7 +6,7 @@ const PackItemCard = ({ pack }) => {
     const listaRender = lista.split("\n");
 
     return (
-        <div className="flex flex-col justify-between items-start p-4 gap-6 mb-6 md:w-96 md:mb-0 ">
+        <div className="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4">
             <div className="w-full">
                 <div className="">
                     <img

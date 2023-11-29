@@ -1,9 +1,8 @@
 'use client'
-import React from "react";
 
 const Hero = ({ hero }) => {
     return (
-        <section className="sm:flex-col flex items-center justify-center flex-col h-screen bg-black">
+        <section className="sm:flex-col flex items-center justify-center flex-col bg-black">
             <video
                 autoPlay={'autoplay'}
                 data-autoplay=''
