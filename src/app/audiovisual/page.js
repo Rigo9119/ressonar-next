@@ -8,21 +8,21 @@ export const metadata = {
 };
 
 const AUDIOVISUAL_QUERY = `
-    query allAudiovisuals {
-        allAudiovisuals {
-            assetVideo {
-                url
-                video {
-                    mp4Url
-                }
-                title
-            }
-            asset {
-                url
-                title
-            }
+query allAudiovisuals {
+    allAudiovisuals {
+      link
+      title
+      assetVideo {
+        video {
+          mp4Url
         }
+      }
+      asset {
+        url
+        title
+      }
     }
+  }
 `;
 
 export default async function Page() {
