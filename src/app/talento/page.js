@@ -15,12 +15,18 @@ const TALENTO_QUERY = `
             nombre
         }
         allAudiovisuals {
+            link
             title
-            link(markdown: false)
-            asset {
-                url
+            assetVideo {
+              video {
+                mp4Url
+              }
             }
-        }
+            asset {
+              url
+              title
+            }
+          }
     }
 `;
 
