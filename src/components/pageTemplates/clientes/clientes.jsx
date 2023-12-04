@@ -15,7 +15,10 @@ const Clientes = ({ clientes }) => {
             <ul className="flex flex-row flex-wrap justify-center items-center bg-black w-full">
                 {logos?.map((logo, index) => {
                     return (
-                        <li key={index}>
+                        <li
+                            className="w-1/6"
+                            key={index}
+                        >
                             <img src={logo.responsiveImage.src} />
                         </li>
                     );
