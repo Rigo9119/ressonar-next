@@ -43,5 +43,14 @@ query hero {
             url
         }
     }
+    allClientLogos {
+        logos {
+            url
+            responsiveImage {
+                src
+                title
+            }
+        }
+    }
 }
 `;
