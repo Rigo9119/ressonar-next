@@ -18,6 +18,7 @@ export default async function Home() {
             hero,
             ressonar,
             allPacks,
+            allClientLogos
         },
     } = await performRequest({ query: RESSONAR_QUERY });
 
@@ -27,7 +28,7 @@ export default async function Home() {
             <Hero hero={hero}/>
             <LoQueHacemos ressonar={ressonar} />
             <Packs packs={allPacks}/>
-            <Clientes />
+            <Clientes clientes={allClientLogos}/>
         </main>
     );
 }
