@@ -3,7 +3,7 @@ const date = new Date(Date.now()).getFullYear();
 
 const Footer = () => {
     return (
-        <footer className="sm:ml-0 md:ml-16 text-center bg-black text-white py-6 w-full">
+        <footer className="sm:ml-0 md:ml-16 text-center bg-black text-white py-6">
             <p className="text-center">
                 <span>&copy;</span>
                 <span>Blytz S.A.S </span>
