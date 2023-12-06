@@ -1,23 +1,22 @@
 import { Image as DatoImage } from "react-datocms";
 
 function ImagesGrid({ imagenes }) {
-
     return (
-        <div className='flex flex-row justify-between items-center w-full felx-wrap'>
+        <ul className="flex flex-row flex-wra overflow-scroll">
             {imagenes.map((image, index) => {
-                const { responsiveImage } = image
+                const { responsiveImage } = image;
 
                 return (
-                    <div
-                        key={index}
-                        className='w-1/2'
-                    >
-                        <DatoImage data={responsiveImage} />
-                    </div>
-                )
+                    <li key={index} className="w-1/2">
+                        <DatoImage
+                            data={responsiveImage}
+                            className=""
+                        />
+                    </li>
+                );
             })}
-        </div>
-    )
+        </ul>
+    );
 }
 
-export default ImagesGrid
+export default ImagesGrid;
