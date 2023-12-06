@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import { Image as DatoImage } from "react-datocms/image";
 
 const Clientes = ({ clientes }) => {
     const { logos } = clientes[0];
 
     return (
-        <section className="flex flex-col gap-8 justify-between items-center bg-white">
+        <section className="flex flex-col gap-8 justify-between items-center bg-white w-full">
             <div className="py-4 px-2 p md:p-6 md:w-1/2">
                 <h2 className="font-bold text-7xl text-black">Clientes</h2>
                 <p className="text-center text-black">
@@ -17,10 +17,7 @@ const Clientes = ({ clientes }) => {
                     {logos?.map((logo, index) => {
                         return (
                             <li className="w-1/6" key={index}>
-                                <img
-                                    src={logo.responsiveImage.src}
-                                    alt="logo"
-                                />
+                                <DatoImage data={logo.responsiveImage} />
                             </li>
                         );
                     })}
