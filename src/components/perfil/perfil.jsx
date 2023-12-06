@@ -17,15 +17,6 @@ const Perfil = ({ perfil }) => {
                         <p>
                             {perfil.descripcion}
                         </p>
-                        {/* <div>
-                            <p className="pb-4">
-                                Sigue a {perfil.nombre.split(' ')[0]}
-                            </p>
-                            <ul>
-                                <li>red social uno</li>
-                                <li>red social uno</li>
-                            </ul>
-                        </div> */}
                     </div>
                     <div className="flex items-center justify-between w-full">
                         <Link className="text-xl" href="/talento">Volver</Link>

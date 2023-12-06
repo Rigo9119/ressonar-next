@@ -48,7 +48,11 @@ query hero {
             url
             responsiveImage {
                 src
+                width
+                height
+                alt
                 title
+                base64
             }
         }
     }
