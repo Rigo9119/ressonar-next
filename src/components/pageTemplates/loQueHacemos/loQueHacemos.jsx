@@ -23,6 +23,7 @@ const LoQueHacemos = ({ ressonar }) => {
                     })}
                 </div>
                 <a
+                    href="https://www.behance.net/ressonarfilms?tracking_source=search_users"
                     target="_blank"
                     className="align-middle cursor-pointer p-5 mb-5 rounded-se-xl rounded-bl-xl bg-red-500 text-white hover:shadow-2xl w-fit"
                 >
@@ -31,7 +32,7 @@ const LoQueHacemos = ({ ressonar }) => {
             </div>
             <div className="hidden md:flex items-center  justify-center w-1/2">
                 <DatoImage
-                    className="w-full"
+                    className="w-full -z-10"
                     data={ressonar.imagen.responsiveImage}
                 />
             </div>

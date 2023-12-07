@@ -13,7 +13,7 @@ const CONTACTO_QUERY = `
         }
     }
 `;
-
+// poner correo ressonarfilms@gmail.com
 export default async function Page() {
     const {
         data: { contacto },
