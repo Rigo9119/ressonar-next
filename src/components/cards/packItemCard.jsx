@@ -8,7 +8,7 @@ const PackItemCard = ({ pack }) => {
     return (
         <div className="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4">
             <div className="w-full">
-                <div className="">
+                <div className="mb-4">
                     <img
                         src={pack.imagen.url}
                         alt={pack.titulo}
@@ -19,7 +19,7 @@ const PackItemCard = ({ pack }) => {
                     {pack.titulo}
                 </h4>
             </div>
-            <p className="text-black text-xl">
+            <p className="text-justify text-black text-xl my-4">
                 {pack.descripcion}
             </p>
             <ul className="hidden md:flex flex-col text-black">

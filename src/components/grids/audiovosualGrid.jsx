@@ -1,6 +1,7 @@
 import AnchorVideo from "../anchorVideo/anchorVideo";
 
 const AudiovosualGrid = ({ videos }) => {
+    //Devolver a dos columnas
     return (
         <div className="flex flex-col flex-nowrap w-full items-center justify-between bg-black">
             <div>

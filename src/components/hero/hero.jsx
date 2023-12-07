@@ -4,6 +4,7 @@ const Hero = ({ hero }) => {
     return (
         <section className="sm:flex-col flex items-center justify-center flex-col bg-black">
             <video
+                loop
                 autoPlay={'autoplay'}
                 data-autoplay=''
             >
