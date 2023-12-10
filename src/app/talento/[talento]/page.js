@@ -25,6 +25,7 @@ const PERFIL_QUERY = `
                     webpSrcSet
                 }
                 url
+                customData
             }
         }
     }
