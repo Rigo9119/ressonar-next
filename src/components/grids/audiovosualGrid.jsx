@@ -4,7 +4,7 @@ const AudiovosualGrid = ({ videos }) => {
     //Devolver a dos columnas
     return (
         <div className="flex flex-col md:flex-row flex-wrap w-full items-center justify-between bg-black">
-            {videos.toReversed().map((video, index) => {
+            {videos.map((video, index) => {
                 return (
                     <AnchorVideo asset={video} key={index}/>
                 )
