@@ -7,11 +7,13 @@ function ImagesGrid({ imagenes }) {
                 const { responsiveImage } = image;
 
                 return (
-                    <li key={index} className="w-1/2">
-                        <DatoImage
-                            data={responsiveImage}
-                            className=""
-                        />
+                    <li key={index} className="w-1/2 cursor-pointer">
+                        <a href={image.customData.image_link} target="_blank">
+                            <DatoImage
+                                data={responsiveImage}
+                                className=""
+                            />
+                        </a>
                     </li>
                 );
             })}

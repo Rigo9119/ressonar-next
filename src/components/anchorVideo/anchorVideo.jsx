@@ -14,7 +14,7 @@ const AnchorVideo = ({ asset }) => {
         <a
             href={asset.link}
             target="_blank"
-            className="relative cursor-pointer md:w-full"
+            className="relative cursor-pointer md:w-1/2"
         >
             <video
                 muted
