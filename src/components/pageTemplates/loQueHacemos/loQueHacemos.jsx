@@ -6,7 +6,7 @@ const LoQueHacemos = ({ ressonar }) => {
 
     return (
         <section className="flex flex-row items-center justify-between gap-6 bg-black p-8">
-            <div className="flex flex-col w-1/2 items-center justify-center gap-6">
+            <div className="flex flex-col w-full md:w-1/2 items-center justify-center gap-6">
                 <div className="flex flex-col">
                     <h2 className="font-bold text-4xl mb-4 text-center md:text-7xl md:text-start text-white">
                         {ressonar.titulo}

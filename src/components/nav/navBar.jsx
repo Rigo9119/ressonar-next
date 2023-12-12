@@ -12,6 +12,10 @@ import MobileMenu from './mobileMenu';
 const NavBar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
 
+    const onHandleClick = () => {
+        setToggleMenu(!toggleMenu)
+    }
+
     return (
         <>
             <nav className="fixed flex flex-row  md:flex-col justify-between items-center w-full bg-gray-200 shadow-md md:h-screen md:w-16">
@@ -28,7 +32,7 @@ const NavBar = () => {
                     </Link>
                 </div>
             </nav>
-            {toggleMenu ? (<MobileMenu />) : null}
+            {toggleMenu ? (<MobileMenu onClick={onHandleClick}/>) : null}
         </>
     );
 };
