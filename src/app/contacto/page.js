@@ -23,7 +23,7 @@ export default async function Page() {
     return (
         <main className="pt-16 md:ml-16 md:pt-0 h-screen flex justify-center items-center">
             <div className="flex flex-col gap-6 justify-center items-center">
-                <h3 className="font-bold text-start text-4xl">
+                <h3 className="font-bold text-center md:text-start text-4xl">
                     {contacto.title}
                 </h3>
                 <div className="w-full px-4 md:w-1/2">
