@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <footer className="sm:ml-0 md:ml-16 text-center bg-black text-white py-6 w-full">
             <div className="flex flex-col md:flex-row items-center justify-between md:px-8">
-                <ul className="flex flex-col items-start justify-between gap-2 w-1/4">
+                <ul className="flex flex-row md:flex-col md:items-start justify-between gap-2 w-full md:w-1/4 px-8 py-7 md:px-0 md:py-0">
                     <li>
                         <Link href={"/ressonar"}>Ressonar</Link>
                     </li>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <Link href={"/contacto"}>Contacto</Link>
                     </li>
                 </ul>
-                <ul className="flex flex-col md:flex-row items-center justify-between w-1/5">
+                <ul className="flex flex-row items-center justify-between w-full md:w-1/5 px-8 py-7 md:px-0 md:py-0">
                     <li>
                         <a
                             href="https://www.instagram.com/ressonarfilms"
