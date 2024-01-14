@@ -26,7 +26,7 @@ const ContactForm = () => {
             <input
                 className="px-4 py-2 w-full border rounded border-color-black"
                 type="text"
-                placeholder="Tú nombre"
+                placeholder="Tu nombre"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -42,14 +42,14 @@ const ContactForm = () => {
             <input
                 className="px-4 py-2 w-full border rounded border-color-black"
                 type="text"
-                placeholder="Tú telefono"
+                placeholder="Tu telefono"
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
             />
             <textarea
                 className="px-4 py-2 w-full border rounded border-color-black"
-                placeholder="Escribenos como podemos ayudarte"
+                placeholder="¿Qué tienes en mente?"
                 name="comment"
                 value={formData.comment}
                 onChange={handleChange}
