@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import emailjs from "email-js";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
     const contactForm = useRef();
@@ -13,13 +13,12 @@ const ContactForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
         emailjs
             .sendForm(
-                process.env.NEXT_EMAILJS_SERVICE_ID,
-                process.env.NEXT_EMAILJS_TEMPLATE_ID,
-                form.current,
-                process.env.NEXT_EMAILJS_PUBLIC_KEY,
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                contactForm.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
             )
             .then(
                 (result) => {
