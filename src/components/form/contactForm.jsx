@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+    const contactForm = useRef();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -11,6 +13,21 @@ const ContactForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        emailjs
+            .sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                contactForm.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+            )
+            .then(
+                (result) => {
+                    console.log(result);
+                },
+                (error) => {
+                    console.log(error);
+                },
+            );
     };
 
     const handleChange = (event) => {
@@ -20,7 +37,9 @@ const ContactForm = () => {
 
     return (
         <form
+            ref={contactForm}
             onSubmit={handleSubmit}
+            name="emailForm"
             className="flex flex-col gap-4 justify-center items-center"
         >
             <input
@@ -34,7 +53,7 @@ const ContactForm = () => {
             <input
                 className="px-4 py-2 w-full border rounded border-color-black"
                 type="text"
-                placeholder="Tú correo"
+                placeholder="Tu correo"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -54,10 +73,12 @@ const ContactForm = () => {
                 value={formData.comment}
                 onChange={handleChange}
             />
-            <input
+            <button
                 className="border w-1/2 rounded bg-green-500 px-4 py-2"
                 type="submit"
-            />
+            >
+                Enviar
+            </button>
         </form>
     );
 };
