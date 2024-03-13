@@ -18,7 +18,7 @@ const Footer = () => {
                         <Link href={"/ressonar"}>Ressonar</Link>
                     </li>
                     <li>
-                        <Link href={"/audivisual"}>Audivisual</Link>
+                        <Link href={"/audivisual"}>Audiovisual</Link>
                     </li>
                     <li>
                         <Link href={"/talento"}>Talento</Link>
